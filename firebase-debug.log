@@ -8,7 +8,7 @@
 [debug] 
 [debug] [2025-03-28T04:55:26.746Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
 [debug] [2025-03-28T04:55:26.828Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-03-28T04:55:26.828Z] > authorizing via signed-in user (dealyalti_2226240037@mhs.mdp.ac.id)
+[debug] [2025-03-28T04:55:26.828Z] > authorizing via signed-in user (Jonathanss999@gmail.com)
 [debug] [2025-03-28T04:55:27.429Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
 [debug] [2025-03-28T04:55:27.430Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
 [debug] [2025-03-28T04:55:35.532Z] Checked if tokens are valid: false, expires at: 1742553754311
@@ -37,7 +37,7 @@
 [debug] [2025-03-28T04:56:20.437Z] ----------------------------------------------------------------------
 [debug] 
 [debug] [2025-03-28T04:56:20.450Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-03-28T04:56:20.451Z] > authorizing via signed-in user (dealyalti_2226240037@mhs.mdp.ac.id)
+[debug] [2025-03-28T04:56:20.451Z] > authorizing via signed-in user (Jonathanss999@gmail.com)
 [debug] [2025-03-28T04:56:56.523Z] Checked if tokens are valid: true, expires at: 1743141334665
 [debug] [2025-03-28T04:56:56.524Z] Checked if tokens are valid: true, expires at: 1743141334665
 [debug] [2025-03-28T04:56:56.526Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
@@ -59,7 +59,7 @@
 [debug] [2025-03-28T04:58:05.447Z] ----------------------------------------------------------------------
 [debug] 
 [debug] [2025-03-28T04:58:05.457Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-03-28T04:58:05.458Z] > authorizing via signed-in user (dealyalti_2226240037@mhs.mdp.ac.id)
+[debug] [2025-03-28T04:58:05.458Z] > authorizing via signed-in user (Jonathanss999@gmail.com)
 [debug] [2025-03-28T04:58:26.873Z] Checked if tokens are valid: true, expires at: 1743141334665
 [debug] [2025-03-28T04:58:26.873Z] Checked if tokens are valid: true, expires at: 1743141334665
 [debug] [2025-03-28T04:58:26.875Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
