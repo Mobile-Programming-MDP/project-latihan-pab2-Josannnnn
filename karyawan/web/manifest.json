@@ -1,6 +1,6 @@
 {
-    "name": "latihan_pab2",
-    "short_name": "latihan_pab2",
+    "name": "karyawan",
+    "short_name": "karyawan",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

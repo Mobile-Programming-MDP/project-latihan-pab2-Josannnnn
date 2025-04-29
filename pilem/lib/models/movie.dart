@@ -1,6 +1,4 @@
-// lib/models/movie.dart
-
-class Movie {
+class Movie{
   final int id;
   final String title;
   final String overview;
@@ -10,27 +8,26 @@ class Movie {
   final double voteAverage;
 
   Movie({
-    required this.id,
-    required this.title,
-    required this.overview,
-    required this.posterPath,
-    required this.backdropPath,
-    required this.releaseDate,
-    required this.voteAverage,
-  });
+    required this.id, 
+    required this.title, 
+    required this.overview, 
+    required this.posterPath, 
+    required this.backdropPath, 
+    required this.releaseDate, 
+    required this.voteAverage
+  }); 
 
-  factory Movie.fromJson(Map<String, dynamic> json) {
+  factory Movie.fromJson(Map<String, dynamic> json){
     return Movie(
-      id: json['id'] as int,
-      title: json['title'] as String,
-      overview: json['overview'] as String,
-      posterPath: json['poster_path'] as String,
-      backdropPath: json['backdrop_path'] as String,
-      releaseDate: json['release_date'] as String,
-      voteAverage: (json['vote_average'] as num).toDouble(),
+      id : json['id'],
+      title : json ['title'],
+      overview: json['overview'],
+      posterPath: json['poster_path'],
+      backdropPath: json['backdrop_path'],
+      releaseDate: json['release_date'],
+      voteAverage: json['vote_average'].toDouble(),
     );
   }
-
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -43,3 +40,4 @@ class Movie {
     };
   }
 }
+
