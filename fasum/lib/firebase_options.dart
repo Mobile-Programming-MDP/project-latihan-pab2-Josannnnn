@@ -78,7 +78,8 @@ class DefaultFirebaseOptions {
     projectId: 'fasummmm-e06ed',
     databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
     storageBucket: 'fasummmm-e06ed.firebasestorage.app',
-    iosClientId: '548942434577-msvl5n5gv46igo69o4aoiqivt508jiqb.apps.googleusercontent.com',
+    iosClientId:
+        '548942434577-msvl5n5gv46igo69o4aoiqivt508jiqb.apps.googleusercontent.com',
     iosBundleId: 'com.example.fasum',
   );
 
@@ -89,8 +90,8 @@ class DefaultFirebaseOptions {
     projectId: 'fasummmm-e06ed',
     databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
     storageBucket: 'fasummmm-e06ed.firebasestorage.app',
-    iosClientId: '548942434577-msvl5n5gv46igo69o4aoiqivt508jiqb.apps.googleusercontent.com',
+    iosClientId:
+        '548942434577-msvl5n5gv46igo69o4aoiqivt508jiqb.apps.googleusercontent.com',
     iosBundleId: 'com.example.fasum',
   );
-
 }
