@@ -33,10 +33,7 @@ class DefaultFirebaseOptions {
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -50,19 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBjR-tm2mjIn5_bTxgBklFk_FBfJBtS1_8',
-    appId: '1:963132235127:web:35d65a09b979662b4d9572',
-    messagingSenderId: '963132235127',
-    projectId: 'fasum-apps123',
-    authDomain: 'fasum-apps123.firebaseapp.com',
-    storageBucket: 'fasum-apps123.firebasestorage.app',
+    apiKey: 'AIzaSyDJNt9l4MWMOKMUNWpZt288Sm86e4TogGM',
+    appId: '1:548942434577:web:4716bccaffe71e7fa37cb0',
+    messagingSenderId: '548942434577',
+    projectId: 'fasummmm-e06ed',
+    authDomain: 'fasummmm-e06ed.firebaseapp.com',
+    storageBucket: 'fasummmm-e06ed.firebasestorage.app',
+    measurementId: 'G-VX5EYN3HXR',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBH1eXOm_OGwdZdh7ruqvNTKu4W7lzAWto',
-    appId: '1:963132235127:android:1c7cec3bca4dbc1b4d9572',
-    messagingSenderId: '963132235127',
-    projectId: 'fasum-apps123',
-    storageBucket: 'fasum-apps123.firebasestorage.app',
+    apiKey: 'AIzaSyBISpQ2Y7HE21N1h80oosbWiWTzkQsPgSA',
+    appId: '1:548942434577:android:749fdd4aaac401dba37cb0',
+    messagingSenderId: '548942434577',
+    projectId: 'fasummmm-e06ed',
+    storageBucket: 'fasummmm-e06ed.firebasestorage.app',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyDJNt9l4MWMOKMUNWpZt288Sm86e4TogGM',
+    appId: '1:548942434577:web:672ab15f4fd4b4b9a37cb0',
+    messagingSenderId: '548942434577',
+    projectId: 'fasummmm-e06ed',
+    authDomain: 'fasummmm-e06ed.firebaseapp.com',
+    storageBucket: 'fasummmm-e06ed.firebasestorage.app',
+    measurementId: 'G-MENZZM37PH',
   );
 }
