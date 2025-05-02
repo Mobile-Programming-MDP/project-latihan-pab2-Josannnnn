@@ -23,15 +23,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
@@ -52,6 +46,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '548942434577',
     projectId: 'fasummmm-e06ed',
     authDomain: 'fasummmm-e06ed.firebaseapp.com',
+    databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
     storageBucket: 'fasummmm-e06ed.firebasestorage.app',
     measurementId: 'G-VX5EYN3HXR',
   );
@@ -61,6 +56,7 @@ class DefaultFirebaseOptions {
     appId: '1:548942434577:android:749fdd4aaac401dba37cb0',
     messagingSenderId: '548942434577',
     projectId: 'fasummmm-e06ed',
+    databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
     storageBucket: 'fasummmm-e06ed.firebasestorage.app',
   );
 
@@ -70,7 +66,31 @@ class DefaultFirebaseOptions {
     messagingSenderId: '548942434577',
     projectId: 'fasummmm-e06ed',
     authDomain: 'fasummmm-e06ed.firebaseapp.com',
+    databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
     storageBucket: 'fasummmm-e06ed.firebasestorage.app',
     measurementId: 'G-MENZZM37PH',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBpgRYxLBaNhhCq2TOF8JBkA4v_dFoO_Sk',
+    appId: '1:548942434577:ios:52fde380ae2a707da37cb0',
+    messagingSenderId: '548942434577',
+    projectId: 'fasummmm-e06ed',
+    databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
+    storageBucket: 'fasummmm-e06ed.firebasestorage.app',
+    iosClientId: '548942434577-msvl5n5gv46igo69o4aoiqivt508jiqb.apps.googleusercontent.com',
+    iosBundleId: 'com.example.fasum',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyBpgRYxLBaNhhCq2TOF8JBkA4v_dFoO_Sk',
+    appId: '1:548942434577:ios:52fde380ae2a707da37cb0',
+    messagingSenderId: '548942434577',
+    projectId: 'fasummmm-e06ed',
+    databaseURL: 'https://fasummmm-e06ed-default-rtdb.firebaseio.com',
+    storageBucket: 'fasummmm-e06ed.firebasestorage.app',
+    iosClientId: '548942434577-msvl5n5gv46igo69o4aoiqivt508jiqb.apps.googleusercontent.com',
+    iosBundleId: 'com.example.fasum',
+  );
+
 }
