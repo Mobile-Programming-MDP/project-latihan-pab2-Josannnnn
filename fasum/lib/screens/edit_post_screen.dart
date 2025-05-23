@@ -69,9 +69,9 @@ class _EditPostScreenState extends State<EditPostScreen> {
         await _compressAndEncodeImage();
       }
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Failed to pick image: $e')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to pick image: $e')),
+      );
     }
   }
 
@@ -87,9 +87,9 @@ class _EditPostScreenState extends State<EditPostScreen> {
         _base64Image = base64Encode(compressedImage);
       });
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Failed to compress image: $e')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to compress image: $e')),
+      );
     }
   }
 
@@ -108,10 +108,10 @@ class _EditPostScreenState extends State<EditPostScreen> {
           .collection('posts')
           .doc(widget.postId)
           .update({
-            'image': _base64Image,
-            'description': _descriptionController.text,
-            'category': _selectedCategory ?? 'Lainnya',
-          });
+        'image': _base64Image,
+        'description': _descriptionController.text,
+        'category': _selectedCategory ?? 'Lainnya',
+      });
 
       if (!mounted) return;
       Navigator.pop(context);
@@ -119,9 +119,9 @@ class _EditPostScreenState extends State<EditPostScreen> {
         const SnackBar(content: Text('Post updated successfully!')),
       );
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Failed to update the post: $e')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to update the post: $e')),
+      );
     } finally {
       setState(() => _isUpdating = false);
     }
@@ -136,18 +136,17 @@ class _EditPostScreenState extends State<EditPostScreen> {
       builder: (BuildContext context) {
         return ListView(
           shrinkWrap: true,
-          children:
-              categories.map((category) {
-                return ListTile(
-                  title: Text(category),
-                  onTap: () {
-                    setState(() {
-                      _selectedCategory = category;
-                    });
-                    Navigator.pop(context);
-                  },
-                );
-              }).toList(),
+          children: categories.map((category) {
+            return ListTile(
+              title: Text(category),
+              onTap: () {
+                setState(() {
+                  _selectedCategory = category;
+                });
+                Navigator.pop(context);
+              },
+            );
+          }).toList(),
         );
       },
     );
@@ -211,34 +210,33 @@ class _EditPostScreenState extends State<EditPostScreen> {
                   color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child:
-                    _image != null
+                child: _image != null
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.file(
+                          _image!,
+                          height: 250,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                    : (_base64Image != null
                         ? ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.file(
-                            _image!,
-                            height: 250,
-                            width: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                        )
-                        : (_base64Image != null
-                            ? ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Image.memory(
-                                base64Decode(_base64Image!),
-                                height: 250,
-                                width: double.infinity,
-                                fit: BoxFit.cover,
-                              ),
-                            )
-                            : const Center(
-                              child: Icon(
-                                Icons.add_a_photo,
-                                size: 50,
-                                color: Colors.grey,
-                              ),
-                            )),
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.memory(
+                              base64Decode(_base64Image!),
+                              height: 250,
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                            ),
+                          )
+                        : const Center(
+                            child: Icon(
+                              Icons.add_a_photo,
+                              size: 50,
+                              color: Colors.grey,
+                            ),
+                          )),
               ),
             ),
             const SizedBox(height: 16),
@@ -274,21 +272,20 @@ class _EditPostScreenState extends State<EditPostScreen> {
                 textStyle: const TextStyle(fontSize: 16),
                 backgroundColor: Colors.green,
               ),
-              child:
-                  _isUpdating
-                      ? const SizedBox(
-                        height: 24,
-                        width: 24,
-                        child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            Colors.white,
-                          ),
+              child: _isUpdating
+                  ? const SizedBox(
+                      height: 24,
+                      width: 24,
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          Colors.white,
                         ),
-                      )
-                      : const Text(
-                        'Update Post',
-                        style: TextStyle(color: Colors.white),
                       ),
+                    )
+                  : const Text(
+                      'Update Post',
+                      style: TextStyle(color: Colors.white),
+                    ),
             ),
           ],
         ),

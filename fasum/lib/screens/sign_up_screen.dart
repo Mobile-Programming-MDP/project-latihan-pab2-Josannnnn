@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fasum/screens/sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +11,7 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final _fullnameController = TextEditingController();
+  final _fullNameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
@@ -28,7 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Column(
           children: [
             TextField(
-              controller: _fullnameController,
+              controller: _fullNameController,
               decoration: const InputDecoration(labelText: 'Full Name'),
             ),
             TextField(
@@ -72,11 +71,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 email: _emailController.text,
                 password: _passwordController.text);
 
+        //Simpan Data Pengguna ke Firestore
         await FirebaseFirestore.instance
-            .collection("Users")
+            .collection("users")
             .doc(newUser.user!.uid)
             .set({
-          'fullName': _fullnameController.text,
+          'fullName': _fullNameController.text.trim(),
           'email': _emailController.text,
           'createdAt': Timestamp.now()
         });
